@@ -3,7 +3,7 @@ import { Modal, Container, Row, Col, Form, Button } from "react-bootstrap";
 
 import "./index.css";
 
-function index() {
+function index(props) {
   return (
     <Modal show={true} backdrop="static" keyboard={false}>
       <Modal.Body>

@@ -9,15 +9,7 @@ function index(props) {
     <>
       <Container>
         <Row>
-          <Col>
-            <Navbar></Navbar>
-          </Col>
-          <Col xs={7}>
             <Tweets></Tweets>
-          </Col>
-          <Col>
-            <Suggestions></Suggestions>
-          </Col>
         </Row>
       </Container>
     </>

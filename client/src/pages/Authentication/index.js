@@ -6,12 +6,20 @@ import twitterLogo from "../../Assets/twitter-logo.png";
 
 import "./index.css";
 
-function index() {
+function index(props) {
   const signIn = () => {
     setTimeout(() => {
       console.log("Rendering");
     }, 10000);
   };
+
+  const onRouteChange = (route) => {
+    props.history.push(route);
+  };
+
+
+
+
   return (
     <div>
       <NonAuthLayout>
@@ -34,12 +42,12 @@ function index() {
                 <Button
                   variant="outline-dark"
                   className="button"
-                  onClick={signIn}
+                  onClick={()=>{onRouteChange("/signin")}}
                 >
                   Sign In
                 </Button>
-                <Button variant="outline-dark" className="button">
-                  Sign Out
+                <Button variant="outline-dark" className="button" onClick={()=>{onRouteChange("/signup")}}>
+                  Sign Up
                 </Button>
               </Stack>
             </Col>

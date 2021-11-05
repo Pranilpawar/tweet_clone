@@ -15,8 +15,9 @@ import {
 import { history } from "../../util/history";
 
 function Navbar(props) {
+  console.log(props)
   const onRouteChange = (route) => {
-    props.history.push(route);
+    props.children.props.history.push(route);
   };
   return (
     <>
@@ -27,16 +28,16 @@ function Navbar(props) {
         className="mt-2 mb-4"
       />
       <div className="nav-button-group flex-column mb-4">
-        <button class="navButton" onClick={onRouteChange("/home")}>
+        <button class="navButton" onClick={()=>{onRouteChange("/home")}}>
           <FontAwesomeIcon icon={faHome} size="lg" /> Home
         </button>
-        <button class="navButton">
+        <button class="navButton" onClick={()=>{onRouteChange("/messages")}}>
           <FontAwesomeIcon icon={faHashtag} size="lg" /> Messages
         </button>
-        <button class="navButton">
+        <button class="navButton"onClick={()=>{onRouteChange("/bookmarks")}}>
           <FontAwesomeIcon icon={faBookmark} size="lg" /> Bookmarks
         </button>
-        <button class="navButton">
+        <button class="navButton"onClick={()=>{onRouteChange("/profile")}}>
           <FontAwesomeIcon icon={faUserCircle} size="lg" /> Profile
         </button>
       </div>

@@ -12,7 +12,7 @@ import {
 import twitterLogo from "../../Assets/twitter-logo.png";
 import "./index.css";
 
-function index() {
+function index(props) {
   return (
     <Modal show={true} backdrop="static" keyboard={false}>
       <Modal.Body>
